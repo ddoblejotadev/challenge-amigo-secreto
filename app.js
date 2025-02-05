@@ -23,3 +23,17 @@ function agregarAmigo() {
     // Limpia el campo de entrada
     input.value = "";
 }
+
+// Función para actualizar la lista de amigos en la UI
+function actualizarLista() {
+    const lista = document.getElementById("listaAmigos");
+    // Limpia la lista existente
+    lista.innerHTML = "";
+    
+    // Itera sobre el arreglo y crea un elemento <li> para cada amigo
+    for (let i = 0; i < amigos.length; i++) {
+        const li = document.createElement("li");
+        li.textContent = amigos[i];
+        lista.appendChild(li);
+    }
+}
